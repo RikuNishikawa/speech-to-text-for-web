@@ -1,4 +1,4 @@
-# speech-to-text
+# frontend
 
 ## Project setup
 ```
