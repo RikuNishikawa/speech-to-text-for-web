@@ -4,17 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
 flask-restful = "*"
 
 [dev-packages]
-autopep8 = "*"
-flake8 = "*"
-rope = "*"
 
 [requires]
 python_version = "3.9"
-python_full_version = "3.9.13"
-
-[scripts]
-start = "python main.py"
