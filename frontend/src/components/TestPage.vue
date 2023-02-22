@@ -1,14 +1,17 @@
 <template>
   <v-container>
-    <v-btn class="ma-2" color="primary">Upload</v-btn>
     <v-icon size="large" color="green-darken-2"> mdi-domain </v-icon>
+    <v-file-input :accept="extend" label="File input"></v-file-input>
+    <v-btn class="ma-2" color="primary"> Submit</v-btn>
   </v-container>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { Options, Vue } from "vue-property-decorator";
 
-export default defineComponent({
-  name: "TestPage",
-});
+@Options({})
+export default class TestPage extends Vue {
+  msg!: string;
+  private extend = [".wav", ".mp3"];
+}
 </script>
