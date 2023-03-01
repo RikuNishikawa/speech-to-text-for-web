@@ -7,7 +7,7 @@ name = "pypi"
 fastapi = "*"
 uvicorn = "*"
 python-multipart = "*"
-whisper = "*"
+openai-whisper = {git = "https://github.com/openai/whisper.git"}
 
 [dev-packages]
 autopep8 = "*"

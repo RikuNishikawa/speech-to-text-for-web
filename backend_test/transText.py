@@ -7,20 +7,12 @@ class ModelType(Enum):
   MEDIUM = "medium"
   LARGE="large"
 
-# class TransText():
-#   '''
-#   modelの種類: ↑計算量小、精度低
-#     base
-#     small
-#     medium
-#     large
-#   '''
-#   def __init__(self):
-#     # self.level = level
-#     pass  
   
 def TransText(level:ModelType,voiceFile):
   # 追々levelもこっちの引数にする。
-  model = whisper.load_model(level)
+  # model = whisper.load_model(level)
+  model = whisper.load_model("base")
   result = model.transcribe(voiceFile)
+  print("result")
+  print(result)
   return result
