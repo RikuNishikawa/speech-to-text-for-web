@@ -17,8 +17,12 @@ import { Options, Vue } from "vue-property-decorator";
 @Options({})
 export default class HeaderItem extends Vue {}
 </script>
+<!-- css部分 -->
 <style>
 .header-title {
   font-size: 24px;
+}
+.px-16 {
+  opacity: 0.8;
 }
 </style>
