@@ -19,3 +19,5 @@ import HeaderMain from "@/components/HeaderMain.vue"; // @ is an alias to /src
 })
 export default class InputView extends Vue {}
 </script>
+
+<style></style>
