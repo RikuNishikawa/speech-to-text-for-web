@@ -1,13 +1,23 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <h2>Click Test</h2>
+  <div class="p-header">
+    <div class="container">
+      <p class="p-header_title">VCT</p>
+      <div class="p-header_nav">
+        <ul class="p-header_nav_list">
+          <li><a href="">menu</a></li>
+          <li><a href="">menu</a></li>
+          <li><a href="">menu</a></li>
+          <li><a href="">menu</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
+
   <test-page />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { Options, Vue } from "vue-property-decorator";
 import TestPage from "@/components/TestPage.vue"; // @ is an alias to /src
 
 @Options({
@@ -15,5 +25,5 @@ import TestPage from "@/components/TestPage.vue"; // @ is an alias to /src
     TestPage,
   },
 })
-export default class HomeView extends Vue {}
+export default class AboutView extends Vue {}
 </script>
