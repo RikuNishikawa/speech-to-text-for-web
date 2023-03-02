@@ -11,8 +11,6 @@ class ModelType(Enum):
 def TransText(level:ModelType,voiceFile):
   # 追々levelもこっちの引数にする。
   # model = whisper.load_model(level)
-  model = whisper.load_model("base")
-  result = model.transcribe(voiceFile)
-  print("result")
-  print(result)
-  return result
+  model = whisper.load_model(level)
+  result = model.transcribe(voiceFile,fp16=False)
+  return result['text']
