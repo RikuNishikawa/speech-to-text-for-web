@@ -1,21 +1,20 @@
 <template>
   <v-app>
     <v-main>
+      <header-item />
       <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import HeaderItem from "@/components/HeaderItem.vue";
+import { Options, Vue } from "vue-property-decorator";
 
-export default defineComponent({
-  name: "App",
-
-  data() {
-    return {
-      //
-    };
+@Options({
+  components: {
+    HeaderItem,
   },
-});
+})
+export default class App extends Vue {}
 </script>
