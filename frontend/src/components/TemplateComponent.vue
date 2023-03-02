@@ -6,5 +6,5 @@
 import { Options, Vue } from "vue-property-decorator";
 
 @Options({})
-export default class TestPage extends Vue {}
+export default class TemplateComponents extends Vue {}
 </script>
