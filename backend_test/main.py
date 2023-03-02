@@ -26,14 +26,13 @@ async def save_upload_file_tmp(fileb: UploadFile=File(...), token:str=Form(...))
       # print(type(fileb))  # <class 'starlette.datastructures.UploadFile'>
       # print(type(fileb.file)) #<class 'tempfile.SpooledTemporaryFile'>
       suffix = Path(fileb.filename).suffix  # 拡張子の取得
-      # tmpfile = NamedTemporaryFile(mode='r',suffix=suffix)
       path = f'./tmp/{fileb.filename}'
       with open(path,'w+b') as buffer:
         shutil.copyfileobj(fileb.file,buffer)
         print("**********")
         text = TransText(ModelType.BASE.value,path)
         print("**********")
-        # print(t)
+      # tmpfile = NamedTemporaryFile(mode='r',suffix=suffix)
       # with NamedTemporaryFile(delete=False, suffix=suffix) as tmpfile:
       #     shutil.copyfileobj(fileb.file, tmpfile)
       #     fileb.file.write()
