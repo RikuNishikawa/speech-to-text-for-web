@@ -1,5 +1,5 @@
 <template>
-  <test-page />
+  <div>出力ページ</div>
 </template>
 
 <script lang="ts">
@@ -11,5 +11,5 @@ import TestPage from "@/components/TestPage.vue"; // @ is an alias to /src
     TestPage,
   },
 })
-export default class AboutView extends Vue {}
+export default class OutputView extends Vue {}
 </script>
