@@ -14,7 +14,6 @@ import InputMain from "@/components/InputMain.vue";
   components: {
     InputHeader,
     InputMain,
-    InputFooter,
   },
 })
 export default class InputView extends Vue {}
