@@ -28,7 +28,7 @@ import { Options, Vue } from "vue-property-decorator";
 @Options({})
 export default class InputHeader extends Vue {}
 </script>
-<style>
+<style scope>
 .position {
   position: absolute;
   margin-top: -64px;
