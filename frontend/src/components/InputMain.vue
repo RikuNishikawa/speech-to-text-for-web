@@ -1,12 +1,16 @@
 <template>
   <v-container class="input-home">
+    <!-- 「説明」 -->
     <div class="input-home-main-pos">
+      <!-- 横棒 -->
       <v-divider :thickness="2"></v-divider>
       <div class="input-home-maintext font-weight-bold">
         <span>説</span><span>明</span>
       </div>
+      <!-- 横棒 -->
       <v-divider :thickness="2"></v-divider>
     </div>
+    <!-- 説明文 -->
     <div class="input-home-subtext">
       <ul>
         <li>「音声データを選択」をクリック</li>
@@ -14,6 +18,7 @@
         <li>「変換」ボタンを押す</li>
       </ul>
     </div>
+    <!-- 画像挿入 -->
     <v-img
       class="main-img"
       :width="600"
@@ -25,18 +30,23 @@
     <!-- active -->
     <div class="input-main-active">
       <div
-        class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height text-success"
+        class="input-main-active-light d-flex justify-space-around align-center flex-column flex-sm-row fill-height text-green"
       >
-        <v-btn variant="falt" font-weight-bold>音声データを選択</v-btn>
+        <v-btn variant="flat" font-weight-bold>音声データを選択</v-btn>
       </div>
       <div
-        class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height text-success"
+        class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height text-white"
       >
-        <v-btn class="font-weight-bold" variant="falt" color="success"
-          >変換</v-btn
-        >
+        <v-btn variant="flat" color="green">変換</v-btn>
       </div>
     </div>
+    <!-- subhome -->
+    <v-sheet>
+      <div class="input-subhome-maintext">
+        このツールは、こんな<span class="color-1">悩み</span>を
+        <br />お持ちの方にお勧め!
+      </div>
+    </v-sheet>
   </v-container>
 </template>
 <script lang="ts">
@@ -52,6 +62,7 @@ export default class InputMain extends Vue {}
   color: #35495e;
   margin: 0 auto;
   width: 100%;
+  min-width: 760px;
 }
 .input-home-main-pos {
   display: flex;
@@ -78,16 +89,28 @@ export default class InputMain extends Vue {}
 /* img */
 .main-img {
   margin: 0 auto;
+  margin-bottom: 32px;
 }
 
 /* active */
 .input-main-active {
   display: flex;
   justify-content: space-around;
-  width: 320px;
-  height: 40px;
+  width: 400px;
+  height: 60px;
   margin: 0 auto;
   border: 2px solid grey;
-  margin-top: 16px;
+  margin-top: 32px;
+  margin-bottom: 128px;
+}
+.color-1 {
+  color: #459866;
+  font-size: 36px;
+  font-weight: bold;
+}
+/* subhome */
+.input-subhome-maintext {
+  font-size: 28px;
+  margin-bottom: 28px;
 }
 </style>
