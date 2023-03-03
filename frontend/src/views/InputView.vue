@@ -1,20 +1,26 @@
 <template>
-  <header-main />
-  <input-main />
+  <div>
+    <input-header class="position" />
+    <input-main />
+  </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
-import HeaderMain from "@/components/HeaderMain.vue";
+import InputHeader from "@/components/InputHeader.vue";
 import InputMain from "@/components/InputMain.vue";
 
 @Options({
   components: {
-    HeaderMain,
+    InputHeader,
     InputMain,
   },
 })
 export default class InputView extends Vue {}
 </script>
 
-<style></style>
+<style scoped>
+.position {
+  position: relative;
+}
+</style>

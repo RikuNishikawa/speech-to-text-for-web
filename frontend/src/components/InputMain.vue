@@ -1,8 +1,12 @@
 <template>
   <v-container class="input-home">
-    <h1 class="input-home-maintext font-weight-bold">
-      説&nbsp;&nbsp;&nbsp;&nbsp;明
-    </h1>
+    <div class="input-home-main-pos">
+      <v-divider :thickness="3"></v-divider>
+      <div class="input-home-maintext font-weight-bold">
+        <span>説</span><span>明</span>
+      </div>
+      <v-divider :thickness="3"></v-divider>
+    </div>
     <div class="input-home-subtext">
       <ul>
         <li>「音声データを選択」をクリック</li>
@@ -18,34 +22,28 @@ import { Options, Vue } from "vue-property-decorator";
 @Options({})
 export default class InputMain extends Vue {}
 </script>
-<style>
-/* h1にcssを当てるのはよくない。スコープが全体になっているから、他で干渉する可能がある。 */
-h1 {
-  display: flex;
-  align-items: center;
-}
-h1::after,
-h1::before {
-  content: "";
-  flex-grow: 1;
-  height: 1px;
-  background: #000;
-}
-h1::after {
-  margin-left: 40px;
-}
-h1::before {
-  margin-right: 40px;
-}
+<style scope>
+/* h1にcssを当てるのはよくない。スコープが全体になっているから、他で干渉する可能がある。 style scopeになっているとこのファイル内でのみのスコープになる。 */
 .input-home {
   text-align: center;
   color: #35495e;
   margin: 0 auto;
   width: 100%;
 }
+.input-home-main-pos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
 .input-home-maintext {
-  padding-top: 60px;
-  padding-bottom: 32px;
+  /* 48pxは大きすぎるかも */
+  font-size: 48px;
+  width: 145px;
+  display: flex;
+  justify-content: space-around;
 }
 .input-home-subtext li {
   display: block;
