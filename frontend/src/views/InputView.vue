@@ -1,21 +1,15 @@
 <template>
-  <v-app>
-    <v-main>
-      <header-main />
-      <input-main />
-    </v-main>
-  </v-app>
+  <header-main />
+  <input-main />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
-import TestPage from "@/components/TestPage.vue"; // @ is an alias to /src
-import HeaderMain from "@/components/HeaderMain.vue"; // @ is an alias to /src
-import InputMain from "@/components/InputMain.vue"; // @ is an alias to /src
+import HeaderMain from "@/components/HeaderMain.vue";
+import InputMain from "@/components/InputMain.vue";
 
 @Options({
   components: {
-    TestPage,
     HeaderMain,
     InputMain,
   },

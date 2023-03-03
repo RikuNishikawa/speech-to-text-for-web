@@ -16,16 +16,10 @@
 import { Options, Vue } from "vue-property-decorator";
 
 @Options({})
-export default class TestPage extends Vue {
-  private extend = [".wav", ".mp3"];
-  private voiceFile = "";
-  public msg = "";
-  private onClick() {
-    alert(this.voiceFile);
-  }
-}
+export default class InputMain extends Vue {}
 </script>
 <style>
+/* h1にcssを当てるのはよくない。スコープが全体になっているから、他で干渉する可能がある。 */
 h1 {
   display: flex;
   align-items: center;
