@@ -1,20 +1,24 @@
 <template>
   <v-app>
+    <header-main />
     <v-main>
-      <header-item />
       <router-view />
     </v-main>
+    <footer-component></footer-component>
   </v-app>
 </template>
 
 <script lang="ts">
-import HeaderItem from "@/components/HeaderItem.vue";
 import { Options, Vue } from "vue-property-decorator";
+import HeaderMain from "@/components/HeaderMain.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 @Options({
   components: {
-    HeaderItem,
+    HeaderMain,
+    FooterComponent,
   },
 })
 export default class App extends Vue {}
 </script>
+<style></style>
