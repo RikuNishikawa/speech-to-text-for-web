@@ -34,10 +34,15 @@
       >
         <v-btn variant="flat" font-weight-bold>音声データを選択</v-btn>
       </div>
-      <div
-        class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height text-white"
-      >
-        <v-btn variant="flat" color="green">変換</v-btn>
+      <div class="d-flex justify-center align-center" style="gap: 1rem">
+        <v-btn
+          :loading="loading"
+          :disabled="loading"
+          color="green"
+          @click="load"
+        >
+          変換
+        </v-btn>
       </div>
     </div>
     <!-- subhome -->
@@ -100,7 +105,7 @@ export default class InputMain extends Vue {}
   height: 60px;
   margin: 0 auto;
   border: 2px solid grey;
-  margin-top: 32px;
+  margin-top: px;
   margin-bottom: 128px;
 }
 .color-1 {
