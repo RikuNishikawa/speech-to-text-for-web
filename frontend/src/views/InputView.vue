@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font">
     <input-header class="position" />
     <input-main />
   </div>
@@ -22,5 +22,8 @@ export default class InputView extends Vue {}
 <style scoped>
 .position {
   position: relative;
+}
+.font {
+  font-family: "02うつくし明朝体";
 }
 </style>
