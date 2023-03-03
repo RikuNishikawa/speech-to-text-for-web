@@ -47,12 +47,24 @@
     </div>
     <!-- subhome -->
     <v-sheet>
-      <div class="input-subhome-maintext">
-        このツールは、こんな<span class="color-1">悩み</span>を
-        <br />お持ちの方にお勧め!
+      <div class="input-home-main-pos">
+        <v-divider :thickness="2"></v-divider>
+        <div class="input-subhome-maintext">
+          このツールは、こんな<span class="color-1">悩み</span>を
+          <br />お持ちの方にお勧め!
+        </div>
+        <v-divider :thickness="2"></v-divider>
       </div>
     </v-sheet>
   </v-container>
+  <v-sheet>
+    <v-img
+      class="img-width"
+      aspect-ratio="16/9"
+      src="../assets/kaboompics_glass-of-water-magazine-travertine-lamp-29165.jpg"
+    >
+    </v-img>
+  </v-sheet>
 </template>
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
@@ -74,8 +86,8 @@ export default class InputMain extends Vue {}
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding-top: 48px;
-  padding-bottom: 24px;
+  margin-top: 40px;
+  margin-bottom: 24px;
 }
 /* メインテキスト */
 .input-home-maintext {
@@ -94,7 +106,13 @@ export default class InputMain extends Vue {}
 /* img */
 .main-img {
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.img-width {
+  width: 100vw;
+  min-width: 760px;
+  height: auto;
 }
 
 /* active */
@@ -105,8 +123,7 @@ export default class InputMain extends Vue {}
   height: 60px;
   margin: 0 auto;
   border: 2px solid grey;
-  margin-top: px;
-  margin-bottom: 128px;
+  margin-bottom: 64px;
 }
 .color-1 {
   color: #459866;
@@ -116,6 +133,6 @@ export default class InputMain extends Vue {}
 /* subhome */
 .input-subhome-maintext {
   font-size: 28px;
-  margin-bottom: 28px;
+  width: 1600px;
 }
 </style>
