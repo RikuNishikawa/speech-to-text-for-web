@@ -1,6 +1,6 @@
 <template>
   <v-sheet class="position">
-    <v-img class="img-width" aspect-ratio="16/9" src="../assets/headerpage.png">
+    <v-img class="img-width" src="../assets/headerpage.png">
       <div class="header-text">
         <v-card-title class="px-16 header-maintext font-weight-bold text-white">
           <div class="space width">
@@ -31,7 +31,7 @@ export default class InputHeader extends Vue {}
 <style scope>
 .position {
   position: absolute;
-  margin-top: -64px;
+  margin-top: -108px;
 }
 .img-width {
   width: 100vw;
@@ -60,6 +60,6 @@ export default class InputHeader extends Vue {}
   font-size: 20px;
   text-align: center;
   letter-spacing: 0.4em;
-  padding: 32px;
+  padding-top: 32px;
 }
 </style>
