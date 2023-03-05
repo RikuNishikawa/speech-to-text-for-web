@@ -182,7 +182,6 @@ export default class InputMain extends Vue {}
   width: 150vw;
 }
 .input-subhome-main {
-  background: white;
   border-radius: 15px;
 }
 li {

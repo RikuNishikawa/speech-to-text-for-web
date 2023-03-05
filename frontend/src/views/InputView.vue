@@ -23,7 +23,4 @@ export default class InputView extends Vue {}
 .position {
   position: relative;
 }
-.font {
-  font-family: "02うつくし明朝体";
-}
 </style>

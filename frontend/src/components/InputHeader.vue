@@ -1,21 +1,25 @@
 <template>
   <v-sheet class="position">
-    <v-img class="img-width" src="../assets/headerpage.png">
+    <v-img class="img-width" src="../assets/headerpage-ver2.png">
       <div class="header-text">
-        <v-card-title class="px-16 header-maintext font-weight-bold text-white">
+        <v-card-title
+          class="px-16 header-maintext font-weight-bold text-grey-darken-4"
+        >
           <div class="space width">
             <span>音</span>
             <span>声</span>
           </div>
           <div>→</div>
-          <div class="space width">
+          <div class="space width pl-6">
             <span>テ</span>
             <span>キ</span>
             <span>ス</span>
             <span>ト</span>
           </div>
         </v-card-title>
-        <v-card-subtitle class="header-subtext font-weight-normal text-white">
+        <v-card-subtitle
+          class="header-subtext font-weight-bold text-grey-darken-4"
+        >
           \ 音声データをテキストデータに変換しよう！ /
         </v-card-subtitle>
       </div>
@@ -44,10 +48,10 @@ export default class InputHeader extends Vue {}
 .header-text {
   position: relative;
   top: 40%;
-  text-shadow: 3px 3px 5px #2d2d2d;
+  /* text-shadow: 3px 3px 5px #2d2d2d; */
 }
 .header-maintext {
-  font-size: 44px;
+  font-size: 56px;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -57,7 +61,7 @@ export default class InputHeader extends Vue {}
   justify-content: space-around;
 }
 .header-subtext {
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   letter-spacing: 0.4em;
   padding-top: 32px;
