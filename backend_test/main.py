@@ -14,7 +14,7 @@ def get_any_message(message: str):
 
 @app.post("/saveuploadfile/")
 async def save_upload_file_tmp(fileb: UploadFile=File(...), token:str=Form(...)):
-  tmp_path:Path = ""
+  # tmp_path:Path = ""
   try:
       # print(type(fileb))  # <class 'starlette.datastructures.UploadFile'>
       # print(type(fileb.file)) #<class 'tempfile.SpooledTemporaryFile'>
@@ -23,6 +23,7 @@ async def save_upload_file_tmp(fileb: UploadFile=File(...), token:str=Form(...))
       with open(path,'w+b') as buffer:
         shutil.copyfileobj(fileb.file,buffer)
         print("**********")
+        print(path,os.path.exists(path))
         text = TransText(ModelType.BASE.value,path)
         print("**********")
       # tmpfile = NamedTemporaryFile(mode='r',suffix=suffix)
@@ -35,7 +36,7 @@ async def save_upload_file_tmp(fileb: UploadFile=File(...), token:str=Form(...))
       #     # print(tmp_path)
   finally:
       fileb.file.close()
-      os.remove(path=path)
+      #os.remove(path=path)
   return {
       "filename": fileb.filename,
       "text":text,

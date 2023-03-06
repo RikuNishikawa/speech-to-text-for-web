@@ -15,8 +15,7 @@ flake8 = "*"
 
 [requires]
 python_version = "3.9"
-python_full_version = "3.9.13"
 
 [scripts]
 start = "uvicorn main:app --host 127.0.0.1 --port 3000 --reload"
-test = "uvicorn main:app --reload"
+test = "uvicorn main:app --host 127.0.0.1 --port 8000 --reload"

@@ -12,6 +12,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
+import axios from "axios";
 
 @Options({})
 export default class TestPage extends Vue {
@@ -19,7 +20,18 @@ export default class TestPage extends Vue {
   private voiceFile = "";
   public msg = "";
   private onClick() {
-    alert(this.voiceFile);
+    console.log(this.voiceFile);
+
+    axios
+      .post("/saveuploadfile/", this.voiceFile)
+
+      .then(function (response) {
+        console.log("data was sent");
+      })
+
+      .catch((error) => {
+        console.log("error");
+      });
   }
 }
 </script>
