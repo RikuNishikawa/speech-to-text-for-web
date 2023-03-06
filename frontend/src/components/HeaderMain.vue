@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar flat class="px-16">
+  <v-app-bar flat class="header px-16">
     <v-toolbar-title class="header-title" @click="moveHome">
       VCT
     </v-toolbar-title>
@@ -34,6 +34,9 @@ export default class HeaderMain extends Vue {
 </script>
 <!-- css部分 -->
 <style>
+.header {
+  border-bottom: 1px solid #d7d7d7;
+}
 .header-title {
   font-size: 24px;
 }

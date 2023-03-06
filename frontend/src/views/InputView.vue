@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font">
     <input-header class="position" />
     <input-main />
   </div>
