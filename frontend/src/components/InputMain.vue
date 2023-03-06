@@ -180,6 +180,7 @@ export default class InputMain extends Vue {}
 .input-subhome-title {
   font-size: 28px;
   width: 80em;
+  color: #35495e;
 }
 .input-subhome-main {
   border-radius: 15px;
@@ -193,5 +194,6 @@ li {
 }
 .input-subhome-text {
   text-align: center;
+  color: #35495e;
 }
 </style>
