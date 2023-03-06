@@ -52,10 +52,10 @@ export default class InputHeader extends Vue {}
   justify-content: center;
   gap: 1rem;
 }
-/* .header-maintext .width {
+.header-maintext .width {
   display: flex;
   justify-content: space-around;
-} */
+}
 .header-subtext {
   font-size: 20px;
   text-align: center;
