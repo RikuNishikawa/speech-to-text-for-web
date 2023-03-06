@@ -21,8 +21,5 @@ import FooterComponent from "@/components/FooterComponent.vue";
 })
 export default class App extends Vue {}
 </script>
-<style>
-.font {
-  font-family: "02うつくし明朝体";
-}
-</style>
+
+<style></style>

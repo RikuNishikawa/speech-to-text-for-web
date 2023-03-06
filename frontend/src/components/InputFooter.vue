@@ -28,7 +28,7 @@
 import { Options, Vue } from "vue-property-decorator";
 
 @Options({})
-export default class TestPage extends Vue {
+export default class InputFooter extends Vue {
   private extend = [".wav", ".mp3"];
   private voiceFile = "";
   public msg = "";
