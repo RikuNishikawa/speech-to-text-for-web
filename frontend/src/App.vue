@@ -21,4 +21,5 @@ import FooterComponent from "@/components/FooterComponent.vue";
 })
 export default class App extends Vue {}
 </script>
+
 <style></style>
