@@ -1,5 +1,5 @@
 <template>
-  <v-app class="font">
+  <v-app>
     <header-main />
     <v-main>
       <router-view />

@@ -2,9 +2,7 @@
   <v-sheet class="position">
     <v-img class="img-width" src="../assets/headerpage-ver2.png">
       <div class="header-text">
-        <v-card-title
-          class="px-16 header-maintext font-weight-bold text-grey-darken-4"
-        >
+        <div class="px-16 header-maintext font-weight-bold text-grey-darken-4">
           <div class="space width">
             <span>音</span>
             <span>声</span>
@@ -16,12 +14,10 @@
             <span>ス</span>
             <span>ト</span>
           </div>
-        </v-card-title>
-        <v-card-subtitle
-          class="header-subtext font-weight-bold text-grey-darken-4"
-        >
+        </div>
+        <div class="header-subtext font-weight-bold text-grey-darken-4">
           \ 音声データをテキストデータに変換しよう！ /
-        </v-card-subtitle>
+        </div>
       </div>
     </v-img>
   </v-sheet>
