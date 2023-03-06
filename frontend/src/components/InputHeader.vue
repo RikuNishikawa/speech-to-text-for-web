@@ -35,7 +35,7 @@ export default class InputHeader extends Vue {}
 <style scope>
 .position {
   position: absolute;
-  margin-top: -108px;
+  margin-top: -64px;
 }
 .img-width {
   width: 100vw;

@@ -117,7 +117,7 @@ import { Options, Vue } from "vue-property-decorator";
 @Options({})
 export default class InputMain extends Vue {}
 </script>
-<style scope>
+<style scoped>
 /* h1にcssを当てるのはよくない。スコープが全体になっているから、他で干渉する可能がある。 style scopeになっているとこのファイル内でのみのスコープになる。 */
 .input-home {
   text-align: center;
@@ -138,7 +138,7 @@ export default class InputMain extends Vue {}
   font-size: 32px;
   width: 8em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /* subtext */
 .input-home-subtext-menu {
@@ -179,7 +179,7 @@ export default class InputMain extends Vue {}
 }
 .input-subhome-title {
   font-size: 28px;
-  width: 150vw;
+  width: 80em;
 }
 .input-subhome-main {
   border-radius: 15px;
