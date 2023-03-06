@@ -1,146 +1,97 @@
 <template>
-  <v-container>
-    <div class="member-title-pos my-8">
-      <v-divider class="border-opacity-50" :thickness="2"></v-divider>
-      <div class="member-title">開発メンバー紹介</div>
-      <v-divider class="border-opacity-50" :thickness="2"></v-divider>
-    </div>
-  </v-container>
-  <!-- img -->
-  <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
-  <!-- member紹介 -->
-  <v-container>
-    <v-sheet class="mb-16">
-      <v-hover v-slot="{ isHovering, props }" open-delay="200">
-        <v-card
-          :elevation="isHovering ? 16 : 2"
-          :class="{ 'on-hover': isHovering }"
-          class="mx-0 member-01"
-          height="240"
-          max-width="350"
-          v-bind="props"
-        >
-          <v-card-text class="font-weight-normal ma-3">
-            <div class="member-name pb-10">
-              <span class="mr-4">石津</span>龍真
+  <!-- 真ん中の要素の右配置の仕方がわからない -->
+  <!-- 画像の挿入方法がわからない -->
+  <v-sheet>
+    <v-hover open-delay="200">
+      <v-card
+        :class="position"
+        class="mx-0 member-01"
+        height="500"
+        max-width="350"
+        v-bind="props"
+      >
+        <v-card-text class="font-weight-normal ma-3">
+          <v-img
+            class="member-image align-center mb-8"
+            :src="memberInfo.image"
+          ></v-img>
+          <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
+          <div class="member-name pb-3">{{ memberInfo.name }}</div>
+          <v-divider class="border-opacity-50 mb-3" :thickness="1"></v-divider>
+          <div>
+            <div class="member-part mb-10">
+              担当:<span class="member-part-color pl-4">
+                {{ memberInfo.responsible }}
+              </span>
             </div>
-            <div class="member-part pb-6">
-              <div class="member-part-01 pb-4">
-                <span>担当:</span><span class="color-01">全般サポート</span>
-              </div>
-              <div class="member-part-02">
-                <span>Email:</span>
-                <span class="color-01">??????@gmail.com</span>
-              </div>
+            <div class="d-flex align-center flex-column flex-sm-row">
+              <v-hover v-slot:default="{ isHovering, props }">
+                <v-btn
+                  class="mr-2"
+                  v-bind="props"
+                  :color="isHovering ? 'primary' : undefined"
+                  variant="outlined"
+                  size="x-small"
+                  icon="mdi-github"
+                  v-bind:href="memberInfo.data.GitHub"
+                ></v-btn>
+              </v-hover>
+              <v-hover v-slot:default="{ isHovering, props }">
+                <v-btn
+                  class="mr-2"
+                  v-bind="props"
+                  :color="isHovering ? 'blue' : undefined"
+                  variant="outlined"
+                  size="x-small"
+                  icon="mdi-twitter"
+                  v-bind:href="memberInfo.data.Twitter"
+                ></v-btn>
+              </v-hover>
+              <v-hover v-slot:default="{ isHovering, props }">
+                <v-btn
+                  class="mr-2"
+                  v-bind="props"
+                  :color="isHovering ? 'blue' : undefined"
+                  variant="outlined"
+                  size="x-small"
+                  icon="mdi-facebook"
+                  v-bind:href="memberInfo.data.Facebook"
+                ></v-btn>
+              </v-hover>
             </div>
-            <div class="member-sns"></div>
-            <div
-              class="d-flex justify-space-around align-center flex-column flex-sm-row"
-            >
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-hover>
-      <v-hover v-slot="{ isHovering, props }" open-delay="200">
-        <v-card
-          :elevation="isHovering ? 16 : 2"
-          :class="{ 'on-hover': isHovering }"
-          class="member-02"
-          height="240"
-          max-width="350"
-          v-bind="props"
-        >
-          <v-card-text class="font-weight-normal ma-3">
-            <div class="member-name pb-10">
-              <span class="mr-4">柴田</span>康希
-            </div>
-            <div class="member-part pb-6">
-              <div class="member-part-01 pb-4">
-                <span>担当:</span><span class="color-01">バックエンド</span>
-              </div>
-              <div class="member-part-02">
-                <span>Email:</span>
-                <span class="color-01">??????@gmail.com</span>
-              </div>
-            </div>
-            <div class="member-sns"></div>
-            <div
-              class="d-flex justify-space-around align-center flex-column flex-sm-row"
-            >
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-hover>
-      <v-hover v-slot="{ isHovering, props }" open-delay="200">
-        <v-card
-          :elevation="isHovering ? 16 : 2"
-          :class="{ 'on-hover': isHovering }"
-          class="mx-0 member-03"
-          height="240"
-          max-width="350"
-          v-bind="props"
-        >
-          <v-card-text class="font-weight-normal ma-3">
-            <div class="member-name pb-10">
-              <span class="mr-4">西川</span>陸
-            </div>
-            <div class="member-part pb-6">
-              <div class="member-part-01 pb-4">
-                <span>担当:</span
-                ><span class="color-01">デザイン/フロントエンド</span>
-              </div>
-              <div class="member-part-02">
-                <span>Email:</span>
-                <span class="color-01">??????@gmail.com</span>
-              </div>
-            </div>
-            <div class="member-sns"></div>
-            <div
-              class="d-flex justify-space-around align-center flex-column flex-sm-row"
-            >
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-              <v-btn variant="outlined" size="large" icon color="info">
-                <v-icon>mdi-pencil</v-icon>
-              </v-btn>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-hover>
-    </v-sheet>
-  </v-container>
+          </div>
+        </v-card-text>
+      </v-card>
+    </v-hover>
+  </v-sheet>
 </template>
 <script lang="ts">
-import { Options, Vue } from "vue-property-decorator";
-
+import { Options, Prop, Vue } from "vue-property-decorator";
+export interface URL {
+  Facebook: string;
+  Twitter: string;
+  GitHub: string;
+}
+export interface MemberInfo {
+  name: string;
+  responsible: string;
+  data: URL;
+  image: string;
+}
 @Options({})
-export default class Member extends Vue {}
+export default class Member extends Vue {
+  @Prop({ default: "" }) private memberInfo!: MemberInfo;
+  @Prop({ default: "right" }) private position!: string;
+}
 </script>
-<style scoped>
-.color-01 {
-  color: #459866;
+<style scope>
+.left {
+  display: flex;
+  justify-content: flex-end;
+}
+.right {
+  display: flex;
+  justify-content: flex-start;
 }
 .member-title-pos {
   display: flex;
@@ -152,35 +103,28 @@ export default class Member extends Vue {}
   font-size: 32px;
   width: 30em;
   text-align: center;
-  color: #35495e;
 }
 .member-img {
   width: 100vw;
   min-width: 760px;
   height: auto;
 }
-.member-name {
-  font-size: 28px;
+.member-image {
+  width: 300px;
+  height: 200px;
+  background: grey;
 }
-.member-text {
-  gap: auto;
+.member-name {
+  font-size: 24px;
 }
 .member-part {
   font-size: 16px;
-  max-width: 300px;
 }
-.member-part-01 {
-  display: flex;
-  justify-content: space-between;
-}
-.member-part-02 {
-  display: flex;
-  justify-content: space-between;
+.member-part-color {
+  color: #459866;
 }
 .member-02 {
   margin: 0 0 0 auto;
 }
-span {
-  color: #35495e;
-}
 </style>
+// eslint-disable-next-line
