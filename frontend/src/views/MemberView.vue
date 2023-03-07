@@ -40,7 +40,7 @@ export default class MemberView extends Vue {
     responsible: "デザイン/フロントエンド",
     data: {
       GitHub: "https://github.com/RikuNishikawa",
-      Twitter: "",
+      Twitter: "@NRiku0917",
       Facebook: "",
     },
     /* image内の書き方わからない */
