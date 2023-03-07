@@ -1,6 +1,5 @@
 <template>
   <!-- 真ん中の要素の右配置の仕方がわからない -->
-  <!-- 画像の挿入方法がわからない -->
   <v-sheet>
     <v-hover open-delay="200">
       <v-card
