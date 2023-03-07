@@ -12,7 +12,9 @@
       >
         <v-card-text class="font-weight-normal ma-3">
           <v-img
-            class="member-image align-center mb-8"
+            class="align-center mb-8"
+            :width="300"
+            :height="200"
             :src="memberInfo.image"
           ></v-img>
           <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
@@ -109,11 +111,10 @@ export default class Member extends Vue {
   min-width: 760px;
   height: auto;
 }
-.member-image {
+/* .member-image {
   width: 300px;
   height: 200px;
-  background: grey;
-}
+} */
 .member-name {
   font-size: 24px;
 }
