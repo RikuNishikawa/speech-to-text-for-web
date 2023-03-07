@@ -11,13 +11,6 @@ app = FastAPI()
 def get_any_message(message: str):
   return {"message": message}
 
-@app.post("/uploadfile/")
-async def post_upload_file(file:UploadFile=File(...)):
-  # whisperに音声ファイルを投げる
-  # text = TransText(ModelType.BASE,file)
-  # return textdata
-  # print(text)
-  return {"filename": file.filename,"filesize":file.size,"headers":file.headers,"file.file":file.file}
 
 @app.post("/saveuploadfile/")
 async def save_upload_file_tmp(fileb: UploadFile=File(...), token:str=Form(...)):

@@ -19,6 +19,7 @@
 import { Options, Vue } from "vue-property-decorator";
 // eslint-disable-next-line
 import Member from "@/components/Member.vue";
+
 @Options({
   components: {
     Member,
@@ -54,4 +55,3 @@ export default class MemberView extends Vue {
   };
 }
 </script>
-// eslint-disable-next-line

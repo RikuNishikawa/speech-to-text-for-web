@@ -68,17 +68,20 @@
 </template>
 <script lang="ts">
 import { Options, Prop, Vue } from "vue-property-decorator";
+
 export interface URL {
   Facebook: string;
   Twitter: string;
   GitHub: string;
 }
+
 export interface MemberInfo {
   name: string;
   responsible: string;
   data: URL;
   image: string;
 }
+
 @Options({})
 export default class Member extends Vue {
   @Prop({ default: "" }) private memberInfo!: MemberInfo;
@@ -91,6 +94,14 @@ export default class Member extends Vue {
   justify-content: flex-end;
 }
 .right {
+  display: flex;
+  justify-content: flex-start;
+}
+.left {
+  display: flex;
+  justify-content: flex-end;
+}
+.rigth {
   display: flex;
   justify-content: flex-start;
 }
