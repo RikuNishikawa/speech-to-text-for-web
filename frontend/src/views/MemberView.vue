@@ -5,10 +5,9 @@
       <div class="member-title">開発メンバー紹介</div>
       <v-divider class="border-opacity-50" :thickness="2"></v-divider>
     </div>
-  </v-container>
-  <!-- img -->
-  <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
-  <v-container>
+    <!-- img -->
+    <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
+
     <member class="mb-5" :memberInfo="ishizu" position="left" />
     <!-- <v-img src="../assets/riku-profile.png"></v-img> -->
     <member class="mb-5" :memberInfo="nishikawa" position="right" />
@@ -45,7 +44,7 @@ export default class MemberView extends Vue {
       Twitter: "@NRiku0917",
       Facebook: "",
     },
-    image: "require(../assets/riku-profile.png)",
+    image: require("../assets/riku-profile.png"),
   };
   public shibata = {
     name: "柴田 康希",
