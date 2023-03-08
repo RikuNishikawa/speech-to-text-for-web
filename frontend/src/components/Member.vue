@@ -11,10 +11,10 @@
       >
         <v-card-text class="font-weight-normal ma-3">
           <v-img
-            class="align-center mb-8"
-            :width="300"
-            :height="200"
-            :src="memberInfo.image"
+            class="member-image align-center mb-8"
+            width="300"
+            height="200"
+            v-bind:src="memberInfo.Image"
           ></v-img>
           <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
           <div class="member-name pb-3">{{ memberInfo.name }}</div>
@@ -32,8 +32,9 @@
                   v-bind="props"
                   :color="isHovering ? 'primary' : undefined"
                   variant="outlined"
-                  size="x-small"
+                  size="large"
                   icon="mdi-github"
+                  opacity="0.5"
                   v-bind:href="memberInfo.data.GitHub"
                 ></v-btn>
               </v-hover>
@@ -43,7 +44,7 @@
                   v-bind="props"
                   :color="isHovering ? 'blue' : undefined"
                   variant="outlined"
-                  size="x-small"
+                  size="large"
                   icon="mdi-twitter"
                   v-bind:href="memberInfo.data.Twitter"
                 ></v-btn>
@@ -54,7 +55,7 @@
                   v-bind="props"
                   :color="isHovering ? 'blue' : undefined"
                   variant="outlined"
-                  size="x-small"
+                  size="large"
                   icon="mdi-facebook"
                   v-bind:href="memberInfo.data.Facebook"
                 ></v-btn>
@@ -79,7 +80,7 @@ export interface MemberInfo {
   name: string;
   responsible: string;
   data: URL;
-  image: string;
+  Image: string;
 }
 
 @Options({})
@@ -94,14 +95,6 @@ export default class Member extends Vue {
   justify-content: flex-end;
 }
 .right {
-  display: flex;
-  justify-content: flex-start;
-}
-.left {
-  display: flex;
-  justify-content: flex-end;
-}
-.rigth {
   display: flex;
   justify-content: flex-start;
 }
