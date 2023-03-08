@@ -8,10 +8,12 @@
   </v-container>
   <!-- img -->
   <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
-
-  <member class="mb-5" :memberInfo="ishizu" position="left" />
-  <member class="mb-5" :memberInfo="nishikawa" position="right" />
-  <member class="mb-5" :memberInfo="shibata" position="left" />
+  <v-container>
+    <member class="mb-5" :memberInfo="ishizu" position="left" />
+    <!-- <v-img src="../assets/riku-profile.png"></v-img> -->
+    <member class="mb-5" :memberInfo="nishikawa" position="right" />
+    <member class="mb-5" :memberInfo="shibata" position="left" />
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -33,23 +35,23 @@ export default class MemberView extends Vue {
       Twitter: "@Rym_gdm",
       Facebook: "",
     },
-    image: "",
+    Image: "",
   };
   public nishikawa = {
     name: "西川 陸",
     responsible: "デザイン/フロントエンド",
     data: {
-      GitHub: "",
-      Twitter: "",
+      GitHub: "https://github.com/RikuNishikawa",
+      Twitter: "@NRiku0917",
       Facebook: "",
     },
-    image: "",
+    Image: "../assets/riku-profile.png",
   };
   public shibata = {
     name: "柴田 康希",
     responsible: "バックエンド",
     data: { GitHub: "", Twitter: "", Facebook: "" },
-    image: "",
+    Image: "",
   };
 }
 </script>
