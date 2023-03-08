@@ -35,7 +35,7 @@ export default class MemberView extends Vue {
       Twitter: "@Rym_gdm",
       Facebook: "",
     },
-    Image: "",
+    image: "",
   };
   public nishikawa = {
     name: "西川 陸",
@@ -45,13 +45,13 @@ export default class MemberView extends Vue {
       Twitter: "@NRiku0917",
       Facebook: "",
     },
-    Image: "../assets/riku-profile.png",
+    image: "require(../assets/riku-profile.png)",
   };
   public shibata = {
     name: "柴田 康希",
     responsible: "バックエンド",
     data: { GitHub: "", Twitter: "", Facebook: "" },
-    Image: "",
+    image: "",
   };
 }
 </script>

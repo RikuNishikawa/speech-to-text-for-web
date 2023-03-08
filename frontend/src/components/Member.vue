@@ -14,7 +14,7 @@
             class="member-image align-center mb-8"
             width="300"
             height="200"
-            v-bind:src="memberInfo.Image"
+            :src="memberInfo.image"
           ></v-img>
           <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
           <div class="member-name pb-3">{{ memberInfo.name }}</div>
@@ -80,7 +80,7 @@ export interface MemberInfo {
   name: string;
   responsible: string;
   data: URL;
-  Image: string;
+  image: string;
 }
 
 @Options({})
