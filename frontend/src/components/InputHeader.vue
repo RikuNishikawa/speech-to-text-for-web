@@ -57,7 +57,7 @@ export default class InputHeader extends Vue {}
   justify-content: space-around;
 }
 .header-subtext {
-  font-size: 20px;
+  font-size: px;
   text-align: center;
   letter-spacing: 0.4em;
   padding-top: 32px;
