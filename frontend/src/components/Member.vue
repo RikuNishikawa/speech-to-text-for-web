@@ -92,7 +92,7 @@ export default class Member extends Vue {
   justify-content: flex-start;
 } */
 .member {
-  max-width: 350px; 
+  max-width: 350px;
 }
 .member-title-pos {
   display: flex;
@@ -129,6 +129,7 @@ export default class Member extends Vue {
 }
 .member-btn {
   max-width: 300px;
+  justify-content: space-around;
 }
 </style>
 // eslint-disable-next-line
