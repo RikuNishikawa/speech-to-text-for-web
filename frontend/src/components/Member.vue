@@ -1,14 +1,7 @@
 <template>
-  <!-- 真ん中の要素の右配置の仕方がわからない -->
-  <v-sheet>
+  <v-sheet class="member">
     <v-hover open-delay="200">
-      <v-card
-        :class="position"
-        class="mx-0 member-01"
-        height="500"
-        max-width="350"
-        v-bind="props"
-      >
+      <v-card class="member-card" height="500" max-width="350">
         <v-card-text class="font-weight-normal ma-3">
           <v-img
             class="member-image align-center mb-8"
@@ -25,7 +18,7 @@
                 {{ memberInfo.responsible }}
               </span>
             </div>
-            <div class="d-flex align-center flex-column flex-sm-row">
+            <div class="member-btn d-flex align-center flex-column flex-sm-row">
               <v-hover v-slot:default="{ isHovering, props }">
                 <v-btn
                   class="mr-2"
@@ -90,19 +83,23 @@ export default class Member extends Vue {
 }
 </script>
 <style scope>
-.left {
+/* .left {
   display: flex;
   justify-content: flex-end;
 }
 .right {
   display: flex;
   justify-content: flex-start;
+} */
+.member {
+  max-width: 350px; 
 }
 .member-title-pos {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  min-width: 760px;
 }
 .member-title {
   font-size: 32px;
@@ -129,6 +126,9 @@ export default class Member extends Vue {
 }
 .member-02 {
   margin: 0 0 0 auto;
+}
+.member-btn {
+  max-width: 300px;
 }
 </style>
 // eslint-disable-next-line
