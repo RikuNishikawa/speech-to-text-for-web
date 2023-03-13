@@ -10,7 +10,9 @@
             :src="memberInfo.image"
           ></v-img>
           <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
-          <div class="member-name pb-3">{{ memberInfo.name }}</div>
+          <div class="member-name pb-3 font-weight-bold">
+            {{ memberInfo.name }}
+          </div>
           <v-divider class="border-opacity-50 mb-3" :thickness="1"></v-divider>
           <div>
             <div class="member-part mb-10">
@@ -25,7 +27,7 @@
                   v-bind="props"
                   :color="isHovering ? 'primary' : undefined"
                   variant="outlined"
-                  size="large"
+                  size="small"
                   icon="mdi-github"
                   opacity="0.5"
                   v-bind:href="memberInfo.data.GitHub"
@@ -37,7 +39,7 @@
                   v-bind="props"
                   :color="isHovering ? 'blue' : undefined"
                   variant="outlined"
-                  size="large"
+                  size="small"
                   icon="mdi-twitter"
                   v-bind:href="memberInfo.data.Twitter"
                 ></v-btn>
@@ -48,7 +50,7 @@
                   v-bind="props"
                   :color="isHovering ? 'blue' : undefined"
                   variant="outlined"
-                  size="large"
+                  size="small"
                   icon="mdi-facebook"
                   v-bind:href="memberInfo.data.Facebook"
                 ></v-btn>
@@ -129,7 +131,6 @@ export default class Member extends Vue {
 }
 .member-btn {
   max-width: 300px;
-  justify-content: space-around;
 }
 </style>
 // eslint-disable-next-line
