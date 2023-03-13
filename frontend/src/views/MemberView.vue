@@ -5,10 +5,8 @@
       <div class="member-title">開発メンバー紹介</div>
       <v-divider class="border-opacity-50" :thickness="2"></v-divider>
     </div>
-  </v-container>
-  <!-- img -->
-  <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
-  <v-container>
+    <!-- img -->
+    <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
     <member class="mb-5" :memberInfo="ishizu" position="left" />
     <member class="mb-5 ml-auto" :memberInfo="shibata" position="right" />
     <member class="mb-5" :memberInfo="nishikawa" position="left" />
