@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="font">
+    <div>
       <output-main />
     </div>
   </v-container>
