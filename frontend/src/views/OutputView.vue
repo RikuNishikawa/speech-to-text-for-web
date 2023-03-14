@@ -1,14 +1,17 @@
 <template>
-  <div>出力ページ</div>
+  <v-container>
+    <div>
+      <output-main />
+    </div>
+  </v-container>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
-import TestPage from "@/components/TestPage.vue"; // @ is an alias to /src
-
+import OutputMain from "@/components/OutputMain.vue"; // @ is an alias to /src
 @Options({
   components: {
-    TestPage,
+    OutputMain,
   },
 })
 export default class OutputView extends Vue {}

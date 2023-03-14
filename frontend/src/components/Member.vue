@@ -1,28 +1,62 @@
 <template>
-  <!-- <div>{{ memberInfo.name }}</div> -->
-  <!-- member紹介 -->
-  <!-- こんな感じでデータを取り出して一人分のパネルだけ作って、dataの中身はiconで隠して、iconクリック時のページ遷移にして欲しい -->
-  <!-- cardのホバーいる？アイコンとかにフォーカスしたときにクリック可能がどうかだけ分かる機能の方が欲しくない？ -->
-
-  <v-sheet>
+  <v-sheet class="member">
     <v-hover open-delay="200">
-      <v-card
-        :class="position"
-        class="mx-0 member-01"
-        height="240"
-        max-width="350"
-        v-bind="props"
-      >
+      <v-card class="member-card" height="500" max-width="350">
         <v-card-text class="font-weight-normal ma-3">
-          <div class="member-name pb-10">{{ memberInfo.name }}</div>
-          <div class="member-part pb-10">
-            <div>担当: {{ memberInfo.responsible }}</div>
-            <v-icon icon="mdi-github"></v-icon>
-            <v-icon icon="mdi-twitter"></v-icon>
-            <v-icon icon="mdi-facebook"></v-icon>
-            <span class="color-01"></span>
+          <v-img
+            class="member-image align-center mb-8"
+            width="300"
+            height="200"
+            :src="memberInfo.image"
+          ></v-img>
+          <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
+          <div class="member-name pb-3 font-weight-bold">
+            {{ memberInfo.name }}
           </div>
-          <div class="member-sns"></div>
+          <v-divider class="border-opacity-50 mb-3" :thickness="1"></v-divider>
+          <div>
+            <div class="member-part mb-10">
+              担当:<span class="member-part-color pl-4">
+                {{ memberInfo.responsible }}
+              </span>
+            </div>
+            <div class="member-btn d-flex align-center flex-column flex-sm-row">
+              <v-hover v-slot:default="{ isHovering, props }">
+                <v-btn
+                  class="mr-2"
+                  v-bind="props"
+                  :color="isHovering ? 'primary' : undefined"
+                  variant="outlined"
+                  size="small"
+                  icon="mdi-github"
+                  opacity="0.5"
+                  v-bind:href="memberInfo.data.GitHub"
+                ></v-btn>
+              </v-hover>
+              <v-hover v-slot:default="{ isHovering, props }">
+                <v-btn
+                  class="mr-2"
+                  v-bind="props"
+                  :color="isHovering ? 'blue' : undefined"
+                  variant="outlined"
+                  size="small"
+                  icon="mdi-twitter"
+                  v-bind:href="memberInfo.data.Twitter"
+                ></v-btn>
+              </v-hover>
+              <v-hover v-slot:default="{ isHovering, props }">
+                <v-btn
+                  class="mr-2"
+                  v-bind="props"
+                  :color="isHovering ? 'blue' : undefined"
+                  variant="outlined"
+                  size="small"
+                  icon="mdi-facebook"
+                  v-bind:href="memberInfo.data.Facebook"
+                ></v-btn>
+              </v-hover>
+            </div>
+          </div>
         </v-card-text>
       </v-card>
     </v-hover>
@@ -51,22 +85,23 @@ export default class Member extends Vue {
 }
 </script>
 <style scope>
-.color-01 {
-  color: #459866;
-}
-.left {
+/* .left {
   display: flex;
   justify-content: flex-end;
 }
-.rigth {
+.right {
   display: flex;
   justify-content: flex-start;
+} */
+.member {
+  max-width: 350px;
 }
 .member-title-pos {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  min-width: 760px;
 }
 .member-title {
   font-size: 32px;
@@ -78,13 +113,24 @@ export default class Member extends Vue {
   min-width: 760px;
   height: auto;
 }
+/* .member-image {
+  width: 300px;
+  height: 200px;
+} */
 .member-name {
-  font-size: 28px;
+  font-size: 24px;
 }
-.member-text {
-  gap: auto;
+.member-part {
+  font-size: 16px;
+}
+.member-part-color {
+  color: #459866;
 }
 .member-02 {
   margin: 0 0 0 auto;
 }
+.member-btn {
+  max-width: 300px;
+}
 </style>
+// eslint-disable-next-line

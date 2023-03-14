@@ -15,7 +15,7 @@
             <span>ト</span>
           </div>
         </div>
-        <div class="header-subtext font-weight-bold text-grey-darken-4">
+        <div class="header-subtext font-weight-normal text-grey-darken-4">
           \ 音声データをテキストデータに変換しよう！ /
         </div>
       </div>
@@ -57,7 +57,7 @@ export default class InputHeader extends Vue {}
   justify-content: space-around;
 }
 .header-subtext {
-  font-size: 24px;
+  font-size: px;
   text-align: center;
   letter-spacing: 0.4em;
   padding-top: 32px;
