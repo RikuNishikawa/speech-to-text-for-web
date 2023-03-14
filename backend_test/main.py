@@ -4,12 +4,32 @@ from transText import ModelType,TransText
 from tempfile import NamedTemporaryFile
 from pathlib import Path
 import os
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+  "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
+
   
 @app.get("/api/{message}")
 def get_any_message(message: str):
   return {"message": message}
+
+@app.post("/uploadtest/")
+def test():
+      #print("ok")
+      return {1234567890}
 
 
 @app.post("/saveuploadfile/")

@@ -20,18 +20,68 @@ export default class TestPage extends Vue {
   private voiceFile = "";
   public msg = "";
   private onClick() {
+    //console.log("result");
     console.log(this.voiceFile);
 
-    axios
-      .post("/saveuploadfile/", this.voiceFile)
+    if (this.voiceFile == "") {
+      axios
+        .post("http://127.0.0.1:8000/uploadtest/", "nothing")
+        .then((response) => {
+          console.log("data was sent");
+          console.log(response.data);
+          console.log(response.status);
+        })
 
-      .then(function (response) {
+        .catch((error) => {
+          console.log("error");
+          console.log(error.response);
+          //console.log(error.response.status);
+        });
+    } else {
+      axios
+        .post("http://127.0.0.1:8000/saveuploadfile/", this.voiceFile)
+        .then((response) => {
+          console.log("data was sent");
+          console.log(response.data);
+          console.log(response.status);
+        })
+
+        .catch((error) => {
+          console.log("error");
+          console.log(error.response);
+        });
+    }
+
+    //=======test用=========
+    /*
+    axios
+      .post("http://127.0.0.1:8000/uploadtest/", "test")
+      .then((response) => {
         console.log("data was sent");
+        console.log(response.data);
+        console.log(response.status);
       })
 
       .catch((error) => {
         console.log("error");
+        console.log(error.response);
+        //console.log(error.response.status);
       });
+    */
+    /*
+    axios
+      .post("http://127.0.0.1:8000/saveuploadfile/", this.voiceFile)
+      .then((response) => {
+        console.log("data was sent");
+        console.log(response.data);
+        console.log(response.status);
+      })
+
+      .catch((error) => {
+        console.log("error");
+        console.log(error.response);
+      });
+    */
   }
 }
 </script>
