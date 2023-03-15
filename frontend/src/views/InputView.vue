@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
-import InputHeader from "@/components/InputHeader.vue";
+// import InputHeader from "@/components/InputHeader.vue";
 import InputMain from "@/components/InputMain.vue";
 
 @Options({

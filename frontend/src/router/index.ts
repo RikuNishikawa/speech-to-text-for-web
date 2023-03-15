@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
     component: InputView,
   },
   {
-    path: "/output",
+    path: "/output/:text/:state",
     name: "output",
     component: OutputView,
   },

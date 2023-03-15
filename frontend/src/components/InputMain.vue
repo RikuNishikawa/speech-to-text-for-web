@@ -82,25 +82,19 @@ export default class InputMain extends Vue {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
-          console.log("data was sent");
-          console.log(response.data); //レスポンスデータがこれ
+          console.log(response.data.text); //レスポンスデータがこれ
           console.log(response.status); //成功したら200
           //ページ遷移
           this.$router.push({
             name: "output",
             params: {
-              text: response.data,
+              text: response.data.text,
               state: response.status,
-              str: "data was sent",
+              path: "/output/",
             },
-          });
-          this.$router.push({
-            name: "output",
-            path: "/output/",
           });
         })
         .catch((error) => {
-          console.log("error");
           console.log(error.response);
         });
     } else {

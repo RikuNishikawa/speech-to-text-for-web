@@ -20,11 +20,13 @@
                 src="../assets/input-subhome-grid-01.png"
               ></v-img>
               <div class="main-home-text">
-                <v-card-title class="font-weight-bold mt-4"
-                  >タイトル
+                <v-card-title class="font-weight-bold mt-4">
+                  議事録のための残業
                 </v-card-title>
-                <v-card-subtitle
-                  >テキストテキストテキスト<br />テキストテキストテキスト<br />テキストテキストテキスト<br />
+                <v-card-subtitle>
+                  会議の文字起こし作業の<br />
+                  ために残業していませんか?<br />
+                  残業時間はこれで0です!
                 </v-card-subtitle>
               </div>
             </li>
@@ -35,11 +37,13 @@
                 src="../assets/input-subhome-grid-02.png"
               ></v-img>
               <div class="main-home-text">
-                <v-card-title class="font-weight-bold mt-4"
-                  >タイトル
+                <v-card-title class="font-weight-bold mt-4">
+                  セミナーの文字起こし
                 </v-card-title>
-                <v-card-subtitle
-                  >テキストテキストテキスト<br />テキストテキストテキスト<br />テキストテキストテキスト<br />
+                <v-card-subtitle>
+                  セミナー等で聞き逃しや<br />
+                  だる～い文字起こしを<br />
+                  VCTで解決しましょう!<br />
                 </v-card-subtitle>
               </div>
             </li>
@@ -50,11 +54,11 @@
                 src="../assets/input-subhome-grid-03.png"
               ></v-img>
               <div class="main-home-text">
-                <v-card-title class="font-weight-bold mt-4"
-                  >タイトル
+                <v-card-title class="font-weight-bold mt-4">
+                  え！こんな言語も！
                 </v-card-title>
-                <v-card-subtitle
-                  >テキストテキストテキスト<br />テキストテキストテキスト<br />テキストテキストテキスト<br />
+                <v-card-subtitle>
+                  日本語や英語<br />ペルシャ語やアラビア語<br />音MADも!?<br />
                 </v-card-subtitle>
               </div>
             </li>

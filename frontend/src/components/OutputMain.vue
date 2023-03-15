@@ -17,28 +17,29 @@
     <!-- active -->
     <div class="output-main-active my-8">
       <div class="output-main-active-text d-flex justify-space-between">
-        <div class="output-active-file">ファイル名.txt</div>
+        <v-card :text="text" />
+        <!-- <div class="output-active-file">ファイル名.txt</div> -->
         <!-- ボタンの形を四角にしたい -->
-        <v-btn
+        <!-- <v-btn
           tile
           color="green"
           class="output-active-download"
           @click="onClick"
         >
           ダウンロード
-        </v-btn>
+        </v-btn> -->
       </div>
     </div>
   </v-sheet>
-  <!-- <div>test: {{ $router.params.data }}</div> -->
 </template>
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
 
 @Options({})
 export default class OutputMain extends Vue {
-  private onClick() {
-    console.log(this.$route, this.$router);
+  private text: string | string[] = "";
+  mounted() {
+    this.text = this.$route.params.text;
   }
 }
 </script>
@@ -57,7 +58,7 @@ export default class OutputMain extends Vue {
   margin: 0 auto;
 }
 .output-main-active-text {
-  width: 40vw;
+  width: 100%;
   border: 1px solid black;
   margin: 0 auto;
 }
