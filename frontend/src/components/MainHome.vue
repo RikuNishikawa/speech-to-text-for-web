@@ -110,7 +110,7 @@ export default class MainHome extends Vue {}
 /* main-home */
 .main-home-title {
   font-size: 24px;
-  width: 80em;
+  width: 90em;
   color: #35495e;
   text-align: center;
 }
