@@ -1,7 +1,7 @@
 <template>
   <v-sheet class="output-main">
     <!-- title -->
-    <div class="output-main-title mt-8 mb-4 text-green">
+    <div class="output-main-title mt-8 mb-4 text-green font-weight-bold">
       \テキスト変換終了!/
     </div>
     <div class="output-main-text">
@@ -19,7 +19,7 @@
       <div class="output-main-active-text d-flex justify-space-between">
         <div class="output-active-file">ファイル名.txt</div>
         <!-- ボタンの形を四角にしたい -->
-        <v-btn tile color="green" class="output-active-download"
+        <v-btn tile color="green" rounded="0" class="output-active-download"
           >ダウンロード</v-btn
         >
       </div>
