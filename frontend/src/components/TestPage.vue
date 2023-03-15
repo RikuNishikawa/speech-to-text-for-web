@@ -21,6 +21,7 @@ export default class TestPage extends Vue {
   private voiceFile: File | null = null;
   public msg = "";
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private onFileChange(e: any) {
     this.voiceFile = e.target.files[0];
   }

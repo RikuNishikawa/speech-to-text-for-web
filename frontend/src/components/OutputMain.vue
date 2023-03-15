@@ -19,18 +19,28 @@
       <div class="output-main-active-text d-flex justify-space-between">
         <div class="output-active-file">ファイル名.txt</div>
         <!-- ボタンの形を四角にしたい -->
-        <v-btn tile color="green" class="output-active-download"
-          >ダウンロード</v-btn
+        <v-btn
+          tile
+          color="green"
+          class="output-active-download"
+          @click="onClick"
         >
+          ダウンロード
+        </v-btn>
       </div>
     </div>
   </v-sheet>
+  <!-- <div>test: {{ $router.params.data }}</div> -->
 </template>
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
 
 @Options({})
-export default class OutputMain extends Vue {}
+export default class OutputMain extends Vue {
+  private onClick() {
+    console.log(this.$route, this.$router);
+  }
+}
 </script>
 <style scoped>
 .output-main {

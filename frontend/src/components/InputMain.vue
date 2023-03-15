@@ -124,6 +124,7 @@ export default class InputMain extends Vue {
   private voiceFile: File | null = null;
   public msg = "";
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private onFileChange(e: any) {
     this.voiceFile = e.target.files[0];
     if (this.voiceFile) {
@@ -142,19 +143,35 @@ export default class InputMain extends Vue {
         })
         .then((response) => {
           console.log("data was sent");
-          console.log(response.data);
-          console.log(response.status);
+          console.log(response.data); //レスポンスデータがこれ
+          console.log(response.status); //成功したら200
+          //ページ遷移
+          this.$router.push({
+            name: "output",
+            params: {
+              text: response.data,
+              state: response.status,
+              str: "data was sent",
+            },
+          });
+          this.$router.push({
+            name: "output",
+            path: "/output/",
+          });
         })
         .catch((error) => {
           console.log("error");
           console.log(error.response);
         });
+    } else {
+      alert(
+        "ファイルが選択されていません。ファイルを設定してから変換ボタンを押して下さい。"
+      );
     }
   }
 }
 </script>
 <style scoped>
-/* h1にcssを当てるのはよくない。スコープが全体になっているから、他で干渉する可能がある。 style scopeになっているとこのファイル内でのみのスコープになる。 */
 .input-home {
   text-align: center;
   color: #35495e;

@@ -25,7 +25,7 @@ export default class HeaderMain extends Vue {
     this.$router.push({ path: "/" });
   }
   private moveInput() {
-    this.$router.push({ path: "/input" });
+    this.$router.push({ path: "/input", params: { test: "test" } });
   }
   private moveMember() {
     this.$router.push({ path: "/member" });

@@ -26,7 +26,7 @@ def get_any_message(message):
   return {"message": message}
 
 @app.post("/upload/")
-async def test(file: UploadFile = File(...)):
+async def upload(file: UploadFile = File(...)):
   filename = file.filename
   path = f'./tmp/{file.filename}'
   try:
@@ -34,42 +34,16 @@ async def test(file: UploadFile = File(...)):
           shutil.copyfileobj(file.file,buffer)
           text = TransText(ModelType.BASE.value,path)
   finally:
+    filename = os.path.splitext(os.path.basename(path))[0]
+    # textpath = f"./tmp/{filename}.txt"
+    # with open(textpath,"w") as f:
+    #   f.write(text)
     file.file.close()
     os.remove(path=path)
-  print(filename)
   print("ok")
-  return {"stuta": "success", "text" : text}
+  return {"stuta": "success", "text" : text, "filename" : filename}
 
-@app.post("/saveuploadfile/")
-async def save_upload_file_tmp(fileb: UploadFile=File(...)):
-  # tmp_path:Path = ""
-  print(fileb)
-  try:
-      # print(type(fileb))  # <class 'starlette.datastructures.UploadFile'>
-      # print(type(fileb.file)) #<class 'tempfile.SpooledTemporaryFile'>
-      suffix = Path(fileb.filename).suffix  # 拡張子の取得
-      path = f'./tmp/{fileb.filename}'
-      with open(path,'w+b') as buffer:
-        shutil.copyfileobj(fileb.file,buffer)
-        print("**********")
-        print(path,os.path.exists(path))
-        text = TransText(ModelType.BASE.value,path)
-        print("**********")
-      # tmpfile = NamedTemporaryFile(mode='r',suffix=suffix)
-      # with NamedTemporaryFile(delete=False, suffix=suffix) as tmpfile:
-      #     shutil.copyfileobj(fileb.file, tmpfile)
-      #     fileb.file.write()
-      #     print("tmpfile",tmpfile)
-      #     # tmpfile.write()
-      #     tmp_path = Path(tmpfile.name)
-      #     # print(tmp_path)
-  finally:
-      fileb.file.close()
-      #os.remove(path=path)
-  return {
-      "filename": fileb.filename,
-      "text":text,
-      "filesize": fileb.size,
-      # "temporary_filepath": tmp_path,
-      "fileb_content_type": fileb.content_type,
-  }
+@app.get("/textfile/")
+async def getTextFile():
+    
+    return "aaa"
