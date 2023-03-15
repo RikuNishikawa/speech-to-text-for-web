@@ -25,7 +25,7 @@ app.add_middleware(
 def get_any_message(message):
   return {"message": message}
 
-@app.post("/uploadtest/")
+@app.post("/upload/")
 async def test(file: UploadFile = File(...)):
   filename = file.filename
   path = f'./tmp/{file.filename}'
@@ -38,7 +38,7 @@ async def test(file: UploadFile = File(...)):
     os.remove(path=path)
   print(filename)
   print("ok")
-  return {"stuta": "success","text" : text}
+  return {"stuta": "success", "text" : text}
 
 @app.post("/saveuploadfile/")
 async def save_upload_file_tmp(fileb: UploadFile=File(...)):

@@ -29,9 +29,12 @@
         <div
           class="d-flex justify-space-around align-center flex-column flex-sm-row fill-height text-green"
         >
-          <v-btn class="input-main-active-text" variant="flat" font-weight-bold>
-            音声データを選択</v-btn
-          >
+          <v-file-input
+            :accept="extend"
+            label="File input"
+            @change="onFileChange"
+            name="file"
+          />
         </div>
         <div class="d-flex justify-center align-center" style="gap: 1rem">
           <v-btn
@@ -39,9 +42,9 @@
             :loading="loading"
             :disabled="loading"
             color="green"
-            @click="load"
+            @click="onClick"
           >
-            変換
+            {{ stateName }}
           </v-btn>
         </div>
       </div>
@@ -112,9 +115,43 @@
 </template>
 <script lang="ts">
 import { Options, Vue } from "vue-property-decorator";
+import axios from "axios";
 
 @Options({})
-export default class InputMain extends Vue {}
+export default class InputMain extends Vue {
+  private stateName = "選択";
+  private extend = [".wav", ".mp3", "m4a"];
+  private voiceFile: File | null = null;
+  public msg = "";
+
+  private onFileChange(e: any) {
+    this.voiceFile = e.target.files[0];
+    if (this.voiceFile) {
+      this.stateName = "変換";
+    } else {
+      this.stateName = "選択";
+    }
+  }
+  private onClick() {
+    if (this.voiceFile) {
+      const formData = new FormData();
+      formData.append("file", this.voiceFile);
+      axios
+        .post("http://127.0.0.1:8000/upload/", formData, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          console.log("data was sent");
+          console.log(response.data);
+          console.log(response.status);
+        })
+        .catch((error) => {
+          console.log("error");
+          console.log(error.response);
+        });
+    }
+  }
+}
 </script>
 <style scoped>
 /* h1にcssを当てるのはよくない。スコープが全体になっているから、他で干渉する可能がある。 style scopeになっているとこのファイル内でのみのスコープになる。 */

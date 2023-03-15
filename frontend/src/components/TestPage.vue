@@ -30,7 +30,7 @@ export default class TestPage extends Vue {
       const formData = new FormData();
       formData.append("file", this.voiceFile);
       axios
-        .post("http://127.0.0.1:8000/uploadtest/", formData, {
+        .post("http://127.0.0.1:8000/upload/", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
