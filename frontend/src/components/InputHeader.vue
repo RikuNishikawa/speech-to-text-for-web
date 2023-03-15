@@ -29,10 +29,10 @@ import { Options, Vue } from "vue-property-decorator";
 export default class InputHeader extends Vue {}
 </script>
 <style scope>
-.position {
+/* .position {
   position: absolute;
   margin-top: -64px;
-}
+} */
 .img-width {
   width: 100vw;
   min-width: 760px;

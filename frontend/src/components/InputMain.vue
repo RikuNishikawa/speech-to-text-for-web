@@ -111,7 +111,6 @@ export default class InputMain extends Vue {
 }
 /* メインテキスト */
 .input-home-maintext {
-  /* 48pxは大きすぎるかも */
   font-size: 32px;
   width: 8em;
   display: flex;

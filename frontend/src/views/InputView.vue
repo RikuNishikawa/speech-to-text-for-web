@@ -1,6 +1,5 @@
 <template>
   <div>
-    <input-header class="position" />
     <input-main />
   </div>
 </template>
@@ -12,7 +11,6 @@ import InputMain from "@/components/InputMain.vue";
 
 @Options({
   components: {
-    InputHeader,
     InputMain,
   },
 })
