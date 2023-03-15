@@ -1,21 +1,18 @@
 <template>
   <v-container>
-    <v-sheet class="main-home pt-8">
+    <v-sheet class="main-home mt-16">
       <div class="input-home-main-pos mb-8">
         <v-divider class="border-opacity-50" :thickness="2"></v-divider>
         <div
-          class="d-flex justify-space-around main-home-title text-grey-darken-4"
+          class="d-flex justify-space-around main-home-title text-green font-weight-bold"
         >
-          <span>H</span>
-          <span>O</span>
-          <span>M</span>
-          <span>E</span>
+          こんな悩みをお持ちの方におすすめ！
         </div>
         <v-divider class="border-opacity-50" :thickness="2"></v-divider>
       </div>
       <v-img class="img-width align-center mb-8" src="../assets/subhomej.jpg">
-        <div class="main-home-main bg-white">
-          <ul class="main-home-img py-6">
+        <div class="main-home-main bg-white pa-6">
+          <ul class="main-home-img">
             <li>
               <v-img
                 :height="150"
@@ -23,7 +20,7 @@
                 src="../assets/input-subhome-grid-01.png"
               ></v-img>
               <div class="main-home-text">
-                <v-card-title class="font-weight-bold mt-4 mb-2"
+                <v-card-title class="font-weight-bold mt-4"
                   >タイトル
                 </v-card-title>
                 <v-card-subtitle
@@ -38,7 +35,7 @@
                 src="../assets/input-subhome-grid-02.png"
               ></v-img>
               <div class="main-home-text">
-                <v-card-title class="font-weight-bold mt-4 mb-2"
+                <v-card-title class="font-weight-bold mt-4"
                   >タイトル
                 </v-card-title>
                 <v-card-subtitle
@@ -53,7 +50,7 @@
                 src="../assets/input-subhome-grid-03.png"
               ></v-img>
               <div class="main-home-text">
-                <v-card-title class="font-weight-bold mt-4 mb-2"
+                <v-card-title class="font-weight-bold mt-4"
                   >タイトル
                 </v-card-title>
                 <v-card-subtitle
@@ -75,11 +72,10 @@ import { Options, Vue } from "vue-property-decorator";
 export default class MainHome extends Vue {}
 </script>
 <style>
-.input-home {
+.main-home {
   text-align: center;
   color: #35495e;
   margin: 0 auto;
-  width: 100%;
   min-width: 760px;
 }
 .input-home-main-pos {
@@ -87,19 +83,13 @@ export default class MainHome extends Vue {}
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  /* min-width: 760px; */
 }
 /* メインテキスト */
 .input-home-maintext {
-  /* 48pxは大きすぎるかも */
   font-size: 32px;
   width: 8em;
   display: flex;
   justify-content: space-around;
-}
-/* subtext */
-.input-home-subtext {
-  /* min-width: 760px; */
 }
 .input-home-subtext-menu {
   display: block;
@@ -108,25 +98,23 @@ export default class MainHome extends Vue {}
 /* img */
 .main-img {
   margin: 0 auto;
-  /* min-width: 760px; */
 }
 .img-width {
   width: 100vw;
-  /* min-width: 760px; */
   height: auto;
 }
 /* main-home */
 .main-home-title {
-  font-size: 56px;
-  width: 15em;
+  font-size: 24px;
+  width: 80em;
   color: #35495e;
   text-align: center;
 }
 .main-home-main {
   border-radius: 15px;
-  /* min-width: 760px; */
   width: 750px;
   margin: 0 auto;
+  opacity: 0.85;
 }
 li {
   display: block;
