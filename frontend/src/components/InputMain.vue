@@ -38,6 +38,7 @@
             class="input-main-active-text"
             :loading="loading"
             :disabled="loading"
+            rounded="0"
             color="green"
             @click="load"
           >
@@ -46,67 +47,6 @@
         </div>
       </div>
       <!-- subhome-title-->
-      <v-sheet class="input-subhome pt-16">
-        <div class="input-home-main-pos">
-          <v-divider class="border-opacity-50" :thickness="2"></v-divider>
-          <div class="input-subhome-title">
-            このツールは、こんな<span class="color-1">悩み</span>を
-            <br />お持ちの方にお勧め!
-          </div>
-          <v-divider class="border-opacity-50" :thickness="2"></v-divider>
-        </div>
-        <v-img class="img-width align-center my-6" src="../assets/subhomej.jpg">
-          <div class="input-subhome-main bg-white">
-            <ul class="input-subhome-img py-6">
-              <li class="input-subhome-grid-img">
-                <v-img
-                  :height="150"
-                  :width="200"
-                  src="../assets/input-subhome-grid-01.png"
-                ></v-img>
-                <div class="input-subhome-text">
-                  <v-card-title class="font-weight-bold mt-4 mb-2"
-                    >タイトル
-                  </v-card-title>
-                  <v-card-subtitle
-                    >テキストテキストテキスト<br />テキストテキストテキスト<br />テキストテキストテキスト<br />
-                  </v-card-subtitle>
-                </div>
-              </li>
-              <li class="input-home-grid-img">
-                <v-img
-                  :width="300"
-                  :height="150"
-                  src="../assets/input-subhome-grid-02.png"
-                ></v-img>
-                <div class="input-subhome-text">
-                  <v-card-title class="font-weight-bold mt-4 mb-2"
-                    >タイトル
-                  </v-card-title>
-                  <v-card-subtitle
-                    >テキストテキストテキスト<br />テキストテキストテキスト<br />テキストテキストテキスト<br />
-                  </v-card-subtitle>
-                </div>
-              </li>
-              <li class="input-home-grid-img">
-                <v-img
-                  :width="200"
-                  :height="150"
-                  src="../assets/input-subhome-grid-03.png"
-                ></v-img>
-                <div class="input-subhome-text">
-                  <v-card-title class="font-weight-bold mt-4 mb-2"
-                    >タイトル
-                  </v-card-title>
-                  <v-card-subtitle
-                    >テキストテキストテキスト<br />テキストテキストテキスト<br />テキストテキストテキスト<br />
-                  </v-card-subtitle>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </v-img>
-      </v-sheet>
     </v-sheet>
   </v-container>
 </template>
