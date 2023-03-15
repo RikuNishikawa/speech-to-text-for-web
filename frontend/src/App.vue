@@ -25,5 +25,7 @@ export default class App extends Vue {}
 <style>
 .font {
   font-family: "02うつくし明朝体";
+  max-width: 1200px;
+  margin: 0 auto;
 }
 </style>
