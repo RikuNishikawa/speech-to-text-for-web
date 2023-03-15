@@ -104,8 +104,8 @@ export default class Member extends Vue {
   min-width: 760px;
 }
 .member-title {
-  font-size: 56px;
-  width: 40em;
+  font-size: 32px;
+  width: 30em;
   text-align: center;
 }
 .member-img {
@@ -118,7 +118,7 @@ export default class Member extends Vue {
   height: 200px;
 } */
 .member-name {
-  font-size: 28px;
+  font-size: 24px;
 }
 .member-part {
   font-size: 20px;
