@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="font">
     <header-main />
     <v-main>
       <router-view />
@@ -22,4 +22,8 @@ import FooterComponent from "@/components/FooterComponent.vue";
 export default class App extends Vue {}
 </script>
 
-<style></style>
+<style>
+.font {
+  font-family: "02うつくし明朝体";
+}
+</style>
