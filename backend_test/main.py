@@ -27,10 +27,18 @@ def get_any_message(message):
 
 @app.post("/uploadtest/")
 async def test(file: UploadFile = File(...)):
-  contents = await file.read()
-  print(contents)
+  filename = file.filename
+  path = f'./tmp/{file.filename}'
+  try:
+    with open(path,'w+b') as buffer:
+          shutil.copyfileobj(file.file,buffer)
+          text = TransText(ModelType.BASE.value,path)
+  finally:
+    file.file.close()
+    os.remove(path=path)
+  print(filename)
   print("ok")
-  return {"message": "success"}
+  return {"stuta": "success","text" : text}
 
 @app.post("/saveuploadfile/")
 async def save_upload_file_tmp(fileb: UploadFile=File(...)):
