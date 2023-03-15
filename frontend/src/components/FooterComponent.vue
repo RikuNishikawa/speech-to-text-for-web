@@ -1,7 +1,5 @@
 <template>
-  <div class="footer">
-    <div>footer領域</div>
-  </div>
+  <div class="footer py-16 text-white"></div>
 </template>
 
 <script lang="ts">

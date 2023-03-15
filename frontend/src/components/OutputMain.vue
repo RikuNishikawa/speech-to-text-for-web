@@ -1,7 +1,7 @@
 <template>
   <v-sheet class="output-main">
     <!-- title -->
-    <div class="output-main-title mt-8 mb-4 text-green">
+    <div class="output-main-title mt-8 mb-4 text-green font-weight-bold">
       \テキスト変換終了!/
     </div>
     <div class="output-main-text">

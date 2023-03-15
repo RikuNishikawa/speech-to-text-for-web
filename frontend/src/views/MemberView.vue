@@ -1,12 +1,16 @@
 <template>
+  <!--   <div class="youso1"></div>
+  <div class="youso2"></div> -->
   <v-container>
     <div class="member-title-pos my-8">
       <v-divider class="border-opacity-50" :thickness="2"></v-divider>
-      <div class="member-title">開発メンバー紹介</div>
+      <div class="member-title font-weight-normal text-grey-darken-4">
+        開発メンバー紹介
+      </div>
       <v-divider class="border-opacity-50" :thickness="2"></v-divider>
     </div>
     <!-- img -->
-    <v-img class="member-img mb-8" src="../assets/member.png"></v-img>
+    <v-img class="member-img mb-12" src="../assets/member.png"></v-img>
     <member class="mb-5" :memberInfo="ishizu" position="left" />
     <member class="mb-5 ml-auto" :memberInfo="shibata" position="right" />
     <member class="mb-5" :memberInfo="nishikawa" position="left" />

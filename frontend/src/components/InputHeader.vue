@@ -15,7 +15,7 @@
             <span>ト</span>
           </div>
         </div>
-        <div class="header-subtext font-weight-normal text-grey-darken-4">
+        <div class="header-subtext font-weight-bold text-grey-darken-4">
           \ 音声データをテキストデータに変換しよう！ /
         </div>
       </div>
@@ -29,10 +29,10 @@ import { Options, Vue } from "vue-property-decorator";
 export default class InputHeader extends Vue {}
 </script>
 <style scope>
-.position {
+/* .position {
   position: absolute;
   margin-top: -64px;
-}
+} */
 .img-width {
   width: 100vw;
   min-width: 760px;

@@ -1,15 +1,25 @@
 <template>
   <v-app-bar flat class="header px-16">
-    <v-toolbar-title class="header-title" @click="moveHome">
+    <v-toolbar-title class="header-title font-weight-bold" @click="moveHome">
       VCT
     </v-toolbar-title>
     <v-spacer />
     <v-toolbar-items style="height: 32px">
-      <v-btn rounded="lg" class="header-btn" @click="moveHome"> Home </v-btn>
-      <v-btn rounded="lg" class="header-btn" @click="moveInput">
+      <v-btn rounded="lg" class="header-btn font-weight-bold" @click="moveHome">
+        Home
+      </v-btn>
+      <v-btn
+        rounded="lg"
+        class="header-btn font-weight-bold"
+        @click="moveInput"
+      >
         音声テキスト変換
       </v-btn>
-      <v-btn rounded="lg" class="header-btn" @click="moveMember">
+      <v-btn
+        rounded="lg"
+        class="header-btn font-weight-bold"
+        @click="moveMember"
+      >
         開発メンバー
       </v-btn>
     </v-toolbar-items>

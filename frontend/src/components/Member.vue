@@ -10,13 +10,13 @@
             :src="memberInfo.image"
           ></v-img>
           <v-divider class="border-opacity-50 mb-6" :thickness="1"></v-divider>
-          <div class="member-name pb-3 font-weight-bold">
+          <div class="member-name text-color mb-6 font-weight-bold">
             {{ memberInfo.name }}
           </div>
-          <v-divider class="border-opacity-50 mb-3" :thickness="1"></v-divider>
+          <v-divider class="border-opacity-50 mb-8" :thickness="1"></v-divider>
           <div>
             <div class="member-part mb-10">
-              担当:<span class="member-part-color pl-4">
+              担当:<span class="member-part-color pl-2">
                 {{ memberInfo.responsible }}
               </span>
             </div>
@@ -121,7 +121,7 @@ export default class Member extends Vue {
   font-size: 24px;
 }
 .member-part {
-  font-size: 16px;
+  font-size: 20px;
 }
 .member-part-color {
   color: #459866;
@@ -130,7 +130,12 @@ export default class Member extends Vue {
   margin: 0 0 0 auto;
 }
 .member-btn {
-  max-width: 300px;
+  max-width: 200px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.text-color {
+  color: #35495e;
 }
 </style>
 // eslint-disable-next-line
